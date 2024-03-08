@@ -3,8 +3,8 @@ Với mục tiêu trở thành cầu nối hiệu quả giữa người mua và 
 |Công nghệ|...
 |:------------------------|:--------------------------
 |Ngôn ngữ lập trình|C#
-|IDE|ASP .NET
-|Framework|Bootstrap 4
+|IDE|Visual Studio 2022
+|Framework|ASP .NET, Bootstrap 4
 |Design Pattern|MVC
 |Cơ sở dữ liệu|SQL Server
 
