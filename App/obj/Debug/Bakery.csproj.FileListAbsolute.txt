@@ -1,0 +1,498 @@
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\Bakery.dll.config
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\Bakery.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\Bakery.pdb
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\csc.exe
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\csc.exe.config
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\csc.rsp
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\csi.exe
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\csi.exe.config
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\csi.rsp
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\Microsoft.Managed.Core.targets
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.AppContext.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.Collections.Immutable.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.Console.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.Globalization.Calendars.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.IO.Compression.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.IO.FileSystem.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.Net.Http.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.Net.Sockets.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.Reflection.Metadata.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.ValueTuple.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.Xml.XmlDocument.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.Xml.XPath.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\vbc.exe
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\vbc.exe.config
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\vbc.rsp
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\VBCSCompiler.exe
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\roslyn\VBCSCompiler.exe.config
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\Antlr3.Runtime.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\EntityFramework.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\EntityFramework.SqlServer.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\Microsoft.Web.Infrastructure.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\Newtonsoft.Json.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\System.Web.Helpers.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\System.Web.Mvc.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\System.Web.Optimization.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\System.Web.Razor.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\System.Web.WebPages.Deployment.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\System.Web.WebPages.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\System.Web.WebPages.Razor.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\WebGrease.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\EntityFramework.xml
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\EntityFramework.SqlServer.xml
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\System.Web.Helpers.xml
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\System.Web.Mvc.xml
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\System.Web.Optimization.xml
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\System.Web.Razor.xml
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\System.Web.WebPages.xml
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\System.Web.WebPages.Deployment.xml
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\System.Web.WebPages.Razor.xml
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\Newtonsoft.Json.xml
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\Antlr3.Runtime.pdb
+D:\H\BTT\CAKE_PROJECT\Bakery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\H\BTT\CAKE_PROJECT\Bakery\obj\Debug\Bakery.csproj.AssemblyReference.cache
+D:\H\BTT\CAKE_PROJECT\Bakery\obj\Debug\Bakery.csproj.CoreCompileInputs.cache
+D:\H\BTT\CAKE_PROJECT\Bakery\obj\Debug\Bakery.csproj.CopyComplete
+D:\H\BTT\CAKE_PROJECT\Bakery\obj\Debug\Bakery.dll
+D:\H\BTT\CAKE_PROJECT\Bakery\obj\Debug\Bakery.pdb
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\Bakery.dll.config
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\Bakery.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\Bakery.pdb
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\csc.exe
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\csc.exe.config
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\csc.rsp
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\csi.exe
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\csi.exe.config
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\csi.rsp
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.AppContext.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.Collections.Immutable.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.Console.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.Globalization.Calendars.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.IO.Compression.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.IO.FileSystem.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.Net.Http.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.Net.Sockets.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.Reflection.Metadata.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.ValueTuple.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.Xml.XPath.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\vbc.exe
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\vbc.exe.config
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\vbc.rsp
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\VBCSCompiler.exe
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\roslyn\VBCSCompiler.exe.config
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\Antlr3.Runtime.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\EntityFramework.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\EntityFramework.SqlServer.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\Microsoft.Web.Infrastructure.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\Newtonsoft.Json.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\System.Web.Helpers.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\System.Web.Mvc.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\System.Web.Optimization.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\System.Web.Razor.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\System.Web.WebPages.Deployment.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\System.Web.WebPages.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\System.Web.WebPages.Razor.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\WebGrease.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\EntityFramework.xml
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\EntityFramework.SqlServer.xml
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\System.Web.Helpers.xml
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\System.Web.Mvc.xml
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\System.Web.Optimization.xml
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\System.Web.Razor.xml
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\System.Web.WebPages.xml
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\System.Web.WebPages.Deployment.xml
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\System.Web.WebPages.Razor.xml
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\Newtonsoft.Json.xml
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\Antlr3.Runtime.pdb
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\obj\Debug\Bakery.csproj.AssemblyReference.cache
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\obj\Debug\Bakery.csproj.CoreCompileInputs.cache
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\obj\Debug\Bakery.csproj.CopyComplete
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\obj\Debug\Bakery.dll
+D:\Đồ án PM LT\ĐỒ ÁN\Bakery\Bakery\obj\Debug\Bakery.pdb
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\Bakery.dll.config
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\Bakery.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\Bakery.pdb
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\csc.exe
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\csc.exe.config
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\csc.rsp
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\csi.exe
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\csi.exe.config
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\csi.rsp
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.AppContext.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.Console.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.IO.Compression.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.Net.Http.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.Net.Sockets.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.ValueTuple.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.Xml.XPath.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\vbc.exe
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\vbc.exe.config
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\vbc.rsp
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\VBCSCompiler.exe
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\Antlr3.Runtime.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\EntityFramework.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\EntityFramework.SqlServer.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\Newtonsoft.Json.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\System.Web.Helpers.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\System.Web.Mvc.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\System.Web.Optimization.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\System.Web.Razor.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\System.Web.WebPages.Deployment.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\System.Web.WebPages.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\System.Web.WebPages.Razor.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\WebGrease.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\EntityFramework.xml
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\EntityFramework.SqlServer.xml
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\System.Web.Helpers.xml
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\System.Web.Mvc.xml
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\System.Web.Optimization.xml
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\System.Web.Razor.xml
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\System.Web.WebPages.xml
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\System.Web.WebPages.Deployment.xml
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\System.Web.WebPages.Razor.xml
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\Newtonsoft.Json.xml
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\Antlr3.Runtime.pdb
+C:\Users\My Computer\Desktop\getgit\Bakery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\My Computer\Desktop\getgit\Bakery\obj\Debug\Bakery.csproj.AssemblyReference.cache
+C:\Users\My Computer\Desktop\getgit\Bakery\obj\Debug\Bakery.csproj.CoreCompileInputs.cache
+C:\Users\My Computer\Desktop\getgit\Bakery\obj\Debug\Bakery.csproj.CopyComplete
+C:\Users\My Computer\Desktop\getgit\Bakery\obj\Debug\Bakery.dll
+C:\Users\My Computer\Desktop\getgit\Bakery\obj\Debug\Bakery.pdb
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\Bakery.dll.config
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\Bakery.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\Bakery.pdb
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\csc.exe
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\csc.exe.config
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\csc.rsp
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\csi.exe
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\csi.exe.config
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\csi.rsp
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.AppContext.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.Collections.Immutable.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.Console.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.Globalization.Calendars.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.IO.Compression.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.IO.FileSystem.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.Net.Http.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.Net.Sockets.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.Reflection.Metadata.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.ValueTuple.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.Xml.XPath.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\vbc.exe
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\vbc.exe.config
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\vbc.rsp
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\VBCSCompiler.exe
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\roslyn\VBCSCompiler.exe.config
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\Antlr3.Runtime.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\EntityFramework.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\EntityFramework.SqlServer.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\Microsoft.Web.Infrastructure.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\Newtonsoft.Json.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\System.Web.Helpers.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\System.Web.Mvc.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\System.Web.Optimization.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\System.Web.Razor.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\System.Web.WebPages.Deployment.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\System.Web.WebPages.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\System.Web.WebPages.Razor.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\WebGrease.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\EntityFramework.xml
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\EntityFramework.SqlServer.xml
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\System.Web.Helpers.xml
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\System.Web.Mvc.xml
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\System.Web.Optimization.xml
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\System.Web.Razor.xml
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\System.Web.WebPages.xml
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\System.Web.WebPages.Deployment.xml
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\System.Web.WebPages.Razor.xml
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\Newtonsoft.Json.xml
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\Antlr3.Runtime.pdb
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\obj\Debug\Bakery.csproj.AssemblyReference.cache
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\obj\Debug\Bakery.csproj.CoreCompileInputs.cache
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\obj\Debug\Bakery.csproj.CopyComplete
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\obj\Debug\Bakery.dll
+D:\Đồ án PM LT\Bakery\Phuc Branch\Bakery\obj\Debug\Bakery.pdb
+D:\Đồ án PM LT\Bakery\Bakery3\bin\Bakery.dll.config
+D:\Đồ án PM LT\Bakery\Bakery3\bin\Bakery.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\Bakery.pdb
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\csc.exe
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\csc.exe.config
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\csc.rsp
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\csi.exe
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\csi.exe.config
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\csi.rsp
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.AppContext.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.Collections.Immutable.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.Console.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.Globalization.Calendars.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.IO.Compression.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.IO.FileSystem.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.Net.Http.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.Net.Sockets.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.Reflection.Metadata.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.ValueTuple.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.Xml.XPath.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\vbc.exe
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\vbc.exe.config
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\vbc.rsp
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\VBCSCompiler.exe
+D:\Đồ án PM LT\Bakery\Bakery3\bin\roslyn\VBCSCompiler.exe.config
+D:\Đồ án PM LT\Bakery\Bakery3\bin\Antlr3.Runtime.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\EntityFramework.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\EntityFramework.SqlServer.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\Microsoft.Web.Infrastructure.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\Newtonsoft.Json.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\System.Web.Helpers.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\System.Web.Mvc.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\System.Web.Optimization.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\System.Web.Razor.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\System.Web.WebPages.Deployment.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\System.Web.WebPages.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\System.Web.WebPages.Razor.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\WebGrease.dll
+D:\Đồ án PM LT\Bakery\Bakery3\bin\EntityFramework.xml
+D:\Đồ án PM LT\Bakery\Bakery3\bin\EntityFramework.SqlServer.xml
+D:\Đồ án PM LT\Bakery\Bakery3\bin\System.Web.Helpers.xml
+D:\Đồ án PM LT\Bakery\Bakery3\bin\System.Web.Mvc.xml
+D:\Đồ án PM LT\Bakery\Bakery3\bin\System.Web.Optimization.xml
+D:\Đồ án PM LT\Bakery\Bakery3\bin\System.Web.Razor.xml
+D:\Đồ án PM LT\Bakery\Bakery3\bin\System.Web.WebPages.xml
+D:\Đồ án PM LT\Bakery\Bakery3\bin\System.Web.WebPages.Deployment.xml
+D:\Đồ án PM LT\Bakery\Bakery3\bin\System.Web.WebPages.Razor.xml
+D:\Đồ án PM LT\Bakery\Bakery3\bin\Newtonsoft.Json.xml
+D:\Đồ án PM LT\Bakery\Bakery3\bin\Antlr3.Runtime.pdb
+D:\Đồ án PM LT\Bakery\Bakery3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Đồ án PM LT\Bakery\Bakery3\obj\Debug\Bakery.csproj.AssemblyReference.cache
+D:\Đồ án PM LT\Bakery\Bakery3\obj\Debug\Bakery.csproj.CoreCompileInputs.cache
+D:\Đồ án PM LT\Bakery\Bakery3\obj\Debug\Bakery.csproj.CopyComplete
+D:\Đồ án PM LT\Bakery\Bakery3\obj\Debug\Bakery.dll
+D:\Đồ án PM LT\Bakery\Bakery3\obj\Debug\Bakery.pdb
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\Bakery.dll.config
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\Bakery.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\Bakery.pdb
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\csc.exe
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\csc.exe.config
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\csc.rsp
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\csi.exe
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\csi.exe.config
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\csi.rsp
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\Microsoft.Managed.Core.targets
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.AppContext.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.Collections.Immutable.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.Console.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.Globalization.Calendars.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.IO.Compression.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.IO.FileSystem.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.Net.Http.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.Net.Sockets.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.Reflection.Metadata.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.ValueTuple.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.Xml.XmlDocument.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.Xml.XPath.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\vbc.exe
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\vbc.exe.config
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\vbc.rsp
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\VBCSCompiler.exe
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\roslyn\VBCSCompiler.exe.config
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\Antlr3.Runtime.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\EntityFramework.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\EntityFramework.SqlServer.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\Microsoft.Web.Infrastructure.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\Newtonsoft.Json.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\System.Web.Helpers.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\System.Web.Mvc.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\System.Web.Optimization.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\System.Web.Razor.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\System.Web.WebPages.Deployment.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\System.Web.WebPages.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\System.Web.WebPages.Razor.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\WebGrease.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\EntityFramework.xml
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\EntityFramework.SqlServer.xml
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\System.Web.Helpers.xml
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\System.Web.Mvc.xml
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\System.Web.Optimization.xml
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\System.Web.Razor.xml
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\System.Web.WebPages.xml
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\System.Web.WebPages.Deployment.xml
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\System.Web.WebPages.Razor.xml
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\Newtonsoft.Json.xml
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\Antlr3.Runtime.pdb
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\obj\Debug\Bakery.csproj.AssemblyReference.cache
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\obj\Debug\Bakery.csproj.CoreCompileInputs.cache
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\obj\Debug\Bakery.csproj.CopyComplete
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\obj\Debug\Bakery.dll
+D:\H\BTT\CAKE_PROJECT\conflict\Bakery\obj\Debug\Bakery.pdb

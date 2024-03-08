@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Bakery.Models.sp_ds_khuyenMai_Result>
+
+@{
+	ViewBag.Title = "Index";
+}
+
+@section Styles {
+	<style>
+		.pr_item:hover {
+			background-color: whitesmoke;
+			cursor: pointer;
+		}
+
+		.detail:hover {
+			text-decoration: underline;
+		}
+	</style>
+}
+
+<div class="m-container">
+
+	@if (Model.Count() < 1)
+	{
+		<h2>Hiện tại cửa hàng không có khuyến mãi nào</h2>
+		<p>Mua nhiều vô, cửa hàng giàu rồi khuyến mãi cho</p>
+	}
+	else { 
+		<h2 class="mb-4 mt-4">Các chương trình khuyến mãi đang áp dụng:</h2>
+	}
+	@foreach (var item in Model)
+	{
+		<div class="row pt-3 pb-3 pr_item">
+			<div class="col-6">
+				<img src="@item.pr_img" alt="Alternate Text" style="width: 100%;" />
+			</div>
+			<div class="col-6">
+				<h3>@item.TenKM</h3>
+				<p><i>Giảm giá @(item.TiLeKM * 100) %</i></p>
+				<p>Từ ngày <b>@item.NgayBD.Value.ToShortDateString()</b> đến ngày <b>@item.NgayKT.Value.ToShortDateString()</b></p>
+				<a href="@Url.Action("Details", new { id = item.MaKM })" class="m-row detail">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon me-2">
+						<path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path>
+					</svg>
+					Xem chi tiết
+				</a>
+			</div>
+		</div>
+		<hr />
+	}
+
+</div>

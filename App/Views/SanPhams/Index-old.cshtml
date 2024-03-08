@@ -1,0 +1,134 @@
+﻿@model IEnumerable<Bakery.Models.sp_DSSP_Result>
+
+@{
+	ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@{var p = Request.Params;}
+<form method="get" id="product-frm">
+	<p>Nhung input co * la danh cho admin, chua co phan quyen</p>
+	<div>
+		<label>Tinh trang*</label>
+		<select name="tinhtrang" onchange="submitFrm()">
+			<option value="true" @(p["tinhTrang"] == "true" ? "selected" : "")>Dang Ban</option>
+			<option value="false" @(p["tinhTrang"] == "false" ? "selected" : "")>Khong ban</option>
+		</select>
+	</div>
+	<div>
+		<label>tim kiem</label>
+		<input type="text" name="keyword" value="@p["keyword"]" onkeydown="onSearchKeyDown(event)" />
+	</div>
+	<div>
+		<label>Loai san pham</label>
+		@Html.DropDownList("maLoai", null, "Tất cả", htmlAttributes: new { @class = "form-control", onchange="submitFrm()" })
+	</div>
+	<div>
+		<label>Sap xep theo</label>
+		@Html.DropDownList("orderOpt", null, "Moi Nhat", htmlAttributes: new { @class = "form-control", onchange = "submitFrm()" })
+	</div>
+	<input type="number" id="page-number" name="page" value="1" hidden/>
+</form>
+<div>
+	<label>so trang: </label>
+	@for (int i = 1; i <= ViewBag.PageCount; i++)
+	{
+		<input type="radio" name="pager" value="@i" onclick="changePage(event)" @((i == 1 && String.IsNullOrEmpty(p["page"])) || (i + "" == p["page"]) ? "checked" : "") />
+	}
+</div>
+
+@if (Session["Role"] == "Admin") { 
+	<p> @Html.ActionLink("Create New", "Create") </p>	
+}
+
+<table class="table">
+	<tr>
+		<th>
+			@Html.DisplayNameFor(model => model.TenSP)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.GiaSP)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.MotaSP)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Sao)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.SoLuotDanhGia)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.SoluongSP)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.TenLoai)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.TiLeKM)
+		</th>
+		<th></th>
+	</tr>
+
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>
+				@Html.DisplayFor(modelItem => item.TenSP)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.GiaSP)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.MotaSP)
+			</td>
+
+			<td>
+				@Html.DisplayFor(modelItem => item.Sao)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.SoLuotDanhGia)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.SoluongSP)
+			</td>
+
+			<td>
+				@Html.DisplayFor(modelItem => item.TenLoai)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.TiLeKM)
+			</td>
+			<td>
+				@Html.ActionLink("Details", "Details", new { id = item.MaSP })
+				@if (Session["Role"] == "Admin")
+				{
+					<text>|@Html.ActionLink("Edit", "Edit", new { id = item.MaSP })</text>
+					<text>|@Html.ActionLink("Delete", "Delete", new { id = item.MaSP })</text>
+
+				}
+			</td>
+		</tr>
+	}	
+
+</table>
+
+<script>
+	var formEl = document.getElementById('product-frm');
+	var pageNumberEl = document.getElementById('page-number');
+
+	function submitFrm () {
+		formEl.submit();
+	}
+
+	function onSearchKeyDown(e) {
+		if (e.keyCode === 13) submitFrm();
+	}
+
+	function changePage(e) {
+		const page = e.target.value;
+		pageNumberEl.value = page;
+		submitFrm();
+	}
+</script>

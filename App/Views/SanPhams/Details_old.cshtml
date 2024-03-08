@@ -1,0 +1,122 @@
+﻿@model Bakery.Models.ViewModels.CTSanPhamVM
+
+<div>
+	<h4>SanPham</h4>
+	<hr />
+	<dl class="dl-horizontal">
+		<dt>
+			@Html.DisplayNameFor(model => model.CTSP.TenSP)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.CTSP.TenSP)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.CTSP.GiaSP)
+		</dt>
+
+		<dd>
+			@if (Model.CTSP.TiLeKM.HasValue)
+			{
+				<del>@Model.CTSP.GiaSP</del>
+				<span>@(Model.CTSP.GiaSP * (1 - Model.CTSP.TiLeKM))</span>
+				<span>(cho den @Model.CTSP.NgayKT.Value.ToShortDateString())</span>
+			}
+			else
+			{
+				@Html.DisplayFor(model => model.CTSP.GiaSP);
+			}
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.CTSP.MotaSP)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.CTSP.MotaSP)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.CTSP.img)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.CTSP.img)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.CTSP.Sao)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.CTSP.Sao)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.CTSP.SoLuotDanhGia)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.CTSP.SoLuotDanhGia)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.CTSP.SoluongSP)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.CTSP.SoluongSP)
+		</dd>
+
+	</dl>
+
+	@if (Session["CustomerID"] != null && Session["Role"] == "Customer")
+	{
+		if (Model.CTSP.SoLuong.HasValue)
+		{
+			<p>Da co trong gio hang:</p>
+			<input type="number" value="@Model.CTSP.SoLuong" min="1" max="@Model.CTSP.SoluongSP" 
+				   onchange="onCartQuantityChange(event, @Model.CTSP.MaSP)" onkeydown="onQuantityKeydown(event)"/>
+			<br />
+			<button>X</button>
+}
+		else
+		{
+			<form action="~/GioHangs/Create" method="post">
+				@Html.AntiForgeryToken()
+				<input type="number" name="MaKH" value="@Session["CustomerID"]" hidden />
+				<input type="number" name="MaSP" value="@Model.CTSP.MaSP" hidden />
+				<input type="submit" value="Them vao gio hang" />
+			</form>
+		}
+	}
+	else
+	{
+		<p>
+			@Html.ActionLink("DANG NHAP ", "SignIn", "KhachHangs")
+			de mua hang
+		</p>
+	}
+
+	<hr />
+	<div>Cac Danh Gia:</div>
+	@foreach (var x in Model.DanhGia)
+	{
+		<div>
+			<h3>@x.TaiKhoan</h3>
+			<div>@x.SoSaoDanhGia</div>
+			<p>@x.NoiDungDanhGia</p>
+			<hr />
+		</div>
+	}
+</div>
+<p>
+	@if (Session["Role"] == "Admin")
+	{
+		<text>
+			@Html.ActionLink("Edit", "Edit", new { id = Model.CTSP.MaSP }) |
+		</text>
+	}
+	@Html.ActionLink("Back to List", "Index")
+</p>

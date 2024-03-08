@@ -1,0 +1,47 @@
+﻿@model Bakery.Models.ViewModels.SignUpVM
+
+@{
+	ViewBag.Title = "Create";
+}
+
+@section Styles {
+	<link href="~/Content/styles/dangnhap.css" rel="stylesheet" type="text/css" />
+}
+
+<div class="login-page">
+	<div class="main">
+		<div class="title">ĐĂNG KÝ</div>
+		@using (Html.BeginForm())
+		{
+			@Html.AntiForgeryToken()
+			<label>Họ tên</label>
+			@Html.EditorFor(model => model.TenKH, new { htmlAttributes = new { @class = "form-control" } })
+			<div class="gender">
+				<label>Giới tính: </label>
+				<input type="radio" name="GioiTinh" value="1" id="male" checked />
+				<label for="male">Nam</label>
+				<input type="radio" name="GioiTinh" value="0" id="female" />
+				<label for="female">Nữ</label>
+				<input type="radio" name="GioiTinh" value="2" id="no" />
+				<label for="no">Khác</label>
+			</div>
+			<label>Số điện thoại</label>
+			@Html.EditorFor(model => model.SoDienThoai, new { htmlAttributes = new { @class = "form-control" } })
+			<label>Ngày sinh</label>
+			@Html.EditorFor(model => model.NgaySinh, new { htmlAttributes = new { @class = "form-control", type = "date" } })
+			<label>Tên tài khoản</label>
+			@Html.EditorFor(model => model.TaiKhoan, new { htmlAttributes = new { @class = "form-control" } })
+			<label>Mật khẩu</label>
+			@Html.EditorFor(model => model.MatKhau, new { htmlAttributes = new { @class = "form-control", type="password" } })
+
+			<input type="submit" value="Gửi" class="submit" />
+		}
+		<div class="signup">
+			Có tài khoản rồi?
+			@Html.ActionLink("Đăng nhập", "SignIn", "Auth")
+		</div>
+		<div class="error">@ViewBag.ErrorMsg</div>
+	</div>
+</div>
+
+

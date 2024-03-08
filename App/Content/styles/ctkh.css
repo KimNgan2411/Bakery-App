@@ -1,0 +1,105 @@
+﻿.user-page {
+	background-color: whitesmoke;
+	min-height: 80vh;
+}
+
+	.user-page .top {
+		height: 30vh;
+		background-color: #1a5691;
+		position: relative;
+		color: white;
+		font-size: 2em;
+		font-weight: bold;
+		text-align: center;
+		padding-top: 50px;
+	}
+
+		.user-page .top img {
+			height: 200px;
+			width: 200px;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translate(-50%, 50%);
+		}
+
+	.user-page .m-container {
+		padding-top: 200px;
+		font-size: 1.5em;
+		padding: 150px;
+	}
+
+		.user-page .m-container .m-row {
+			justify-content: space-between;
+		}
+
+		.user-page .m-container .history {
+			margin-top: 50px;
+		}
+
+			.user-page .m-container .history .title {
+				font-size: 1.5em;
+				font-weight: bold;
+				margin: 50px 0;
+			}
+
+			.user-page .m-container .history .item {
+				position: relative;
+				border: 1px solid black;
+				padding: 20px;
+				margin-bottom: 40px;
+			}
+
+				.user-page .m-container .history .item .date {
+					position: absolute;
+					top: 0;
+					transform: translateY(-50%);
+					background-color: whitesmoke;
+					font-size: 1.2em;
+					font-weight: bold;
+				}
+
+				.user-page .m-container .history .item .state {
+					font-style: italic;
+					color: grey;
+				}
+
+					.user-page .m-container .history .item .state.sp {
+						color: greenyellow;
+					}
+
+				.user-page .m-container .history .item li {
+					margin: 5px 0;
+				}
+
+				.user-page .m-container .history .item .name {
+					font-weight: bold;
+					font-size: 1.2em;
+					margin-top: 10px;
+				}
+
+				.user-page .m-container .history .item .review-btn {
+					position: absolute;
+					right: 10px;
+					top: 50%;
+					transform: translateY(-50%);
+					/*background-color: #1a5691;
+					color: white;
+					padding: 10px 20px;
+					cursor: pointer;*/
+				}
+
+				.user-page .m-container .history .item .review-msg {
+					position: absolute;
+					right: 10px;
+					top: 50%;
+					transform: translateY(-50%);
+					color: grey;
+				}
+
+.star.yellow path {
+	fill: #FFE145;
+}
+.star.grey path {
+	fill: grey;
+}

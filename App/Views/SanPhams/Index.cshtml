@@ -1,0 +1,149 @@
+﻿@model IEnumerable<Bakery.Models.sp_DSSP_Result>
+
+@{
+	ViewBag.Title = "Index";
+}
+
+@section Styles {
+	<link href="~/Content/styles/sanpham.css" rel="stylesheet" type="text/css" />
+}
+
+@{
+	//get list of query params;
+	var p = Request.Params;
+	//get list of categories from viewbag
+	var categories = (List<Bakery.Models.sp_ds_loaisp_Result>)ViewBag.loai;
+
+	//Assign selected category name
+	string currentCate = "";
+	if (String.IsNullOrEmpty(p["maloai"])) { currentCate = "Sản phẩm"; } 
+	else
+	{
+		foreach (var x in categories)
+		{
+			if (x.MaLoai + "" == p["maloai"]) { currentCate = x.TenLoai; break; }
+		}
+	}
+}
+
+<div class="product-page font-poppins">
+	<div class="m-container">
+
+		<div class="m-header">Loại sản phẩm</div>
+		<div class="slider-container" style="--slide-width: calc(70vw / 8); --slide-height: calc(70vw / 8);" data-limit="8">
+			<div class="move-slide next-slide">
+				<svg xmlns="http://www.w3.org/2000/svg"
+					 viewBox="0 0 448 512">
+					<path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+				</svg>
+			</div>
+			<div class="move-slide prev-slide">
+				<svg xmlns="http://www.w3.org/2000/svg"
+					 viewBox="0 0 448 512">
+					<path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+				</svg>
+			</div>
+			<input type="text" name="maloai" value="@p["maloai"]" form="product-frm" id="cateEl" hidden />
+			<div class="slider">
+
+				@foreach (var x in (categories))
+				{
+					<div class="slider-item pointer @(p["maloai"] == x.MaLoai + "" ? "selected" : "")" data-cateid="@x.MaLoai" onclick="selectCate(event)">
+						<div class="content">
+							<div class="img-wrapper">
+								<img src="@x.cate_img" alt="">
+							</div>
+							<div class="item-title font-nunito">
+								@x.TenLoai
+							</div>
+						</div>
+					</div>
+				}
+			</div>
+		</div>
+
+		<div class="product-header">
+			<div class="m-header">@currentCate</div>
+			<div class="sort">
+				<div style="white-space: nowrap; margin-right: 20px">Sắp xếp theo:</div>
+				@Html.DropDownList("orderOpt", null, "Mới nhất", htmlAttributes: new { @class = "form-control", form = "product-frm", onchange = "searchProduct()" })
+			</div>
+		</div>
+
+		@if (!String.IsNullOrEmpty(p["keyword"]))
+		{
+			<p><i>Hiển thị kết quả cho từ khóa "@p["keyword"]"</i></p>
+		}
+
+		@if (Model.Count() == 0)
+		{
+			<div>
+				<h3>Không tìm thấy sản phẩm phù hợp với tiêu chí của bạn :<</h3>
+				<p>Mua cái khác nhé</p>
+			</div>
+		}
+
+		<div class="product-list">
+
+			@foreach (var x in Model)
+			{
+				<a href="SanPhams/DetailS/@x.MaSP">
+					<div class="product">
+						<div class="img-wrapper">
+							<img src="@x.img" alt="">
+						</div>
+						<div class="name">@x.TenSP</div>
+						<div class="star">
+							@x.Sao / 5
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon ms-1 me-2">
+								<path fill="#FFE145" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+							</svg>
+							<i>(@x.SoLuotDanhGia đánh giá)</i>
+						</div>
+						<div class="price">
+							@if (x.TiLeKM.HasValue)
+							{
+								<del>@string.Format("{0:N0}", x.GiaSP)</del>
+								<text>@string.Format("{0:N0}", x.GiaSP * (1-x.TiLeKM))</text>
+							}
+							else
+							{
+								<text>@string.Format("{0:N0}", x.GiaSP)</text>
+							}
+							đ
+						</div>
+					</div>
+				</a>
+			}
+
+		</div>
+
+		<div class="pager">
+			@for (int i = 1; i <= ViewBag.PageCount; i++)
+			{
+				<div class="page pointer @((i == 1 && String.IsNullOrEmpty(p["page"])) || (i + "" == p["page"]) ? "selected" : "")"
+					 onclick="changePage(event)">@i</div>
+				}
+		</div>
+	</div>
+</div>
+
+@section scripts {
+	<script>
+
+		function changePage(e) {
+			const page = $(e.target).html();
+			$(pageNumEl).val(page);
+			searchProduct();
+		}
+
+		function selectCate(e) {
+			let id = $(e.currentTarget).data('cateid');
+			if (id == $('#cateEl').val()) id = "";
+			$('#cateEl').val(id);
+			searchProduct();
+		}
+
+	</script>
+}
+

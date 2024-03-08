@@ -1,0 +1,103 @@
+﻿@model Bakery.Models.ViewModels.CTKHVM
+
+@{
+	ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+	<h4>KhachHang</h4>
+	<hr />
+	<dl class="dl-horizontal">
+		<dt>
+			@Html.DisplayNameFor(model => model.kh.TenKH)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.kh.TenKH)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.kh.GioiTinh)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.kh.GioiTinh)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.kh.SoDienThoai)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.kh.SoDienThoai)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.kh.NgaySinh)
+		</dt>
+
+		<dd>
+			@(Model.kh.NgaySinh.HasValue? Model.kh.NgaySinh.Value.ToShortDateString(): "")
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.kh.tinhTrang)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.kh.tinhTrang)
+		</dd>
+
+	</dl>
+</div>
+<hr />
+<h3>Lich su mua hang</h3>
+@foreach (var x in Model.hds)
+{
+	<div style="border: 1px solid black; margin-bottom: 10px;">
+		<div>@x.hd.NgayHD.Value.ToShortDateString()</div>
+		<div>@x.hd.TongTien</div>
+		<div>@(x.hd.TinhTrangGiao.Value ? "Da giao" : "Chua giao")</div>
+		<ul style="border: 1px solid black; padding: 10px; padding-left:50px">
+			@foreach (var y in x.cthds)
+			{
+				<li>
+					@y.TenSP - @(y.DonGia.Value - (y.GiamGia.HasValue ? y.GiamGia.Value : 0)) x @y.SoLuong -
+					@(y.SoSaoDanhGia.HasValue ? y.SoSaoDanhGia.Value + "*" : "Chua danh gia")
+				</li>
+			}
+		</ul>
+		<button onclick="showReviewDialog(@x.hd.MaHD)">Danh gia</button>
+	</div>
+}
+
+<div class="dialog-wrapper hidden">
+	<div class="dialog-content">
+		@foreach (var x in Model.hds)
+		{
+			<form class="review hidden" method="post" action="AddReview" data-id="@x.hd.MaHD">
+				@for (int i = 0; i < x.cthds.Count(); i++)
+				{
+					<input type="number" name="[@i].MaSP" value="@x.cthds[i].MaSP" hidden />
+					<input type="number" name="[@i].MaHD" value="@x.cthds[i].MaHD" hidden />
+					<div>@x.cthds[i].TenSP</div>
+					<div><input type="number" name="[@i].SoSaoDanhGia" min="1" max="5" value="5" /></div>
+					<div><input type="text" name="[@i].NoiDungDanhGia" placeholder="Noi dung danh gia" /></div>
+				}
+				<input type="submit" value="Gui danh gia" />
+			</form>
+		}
+	</div>
+</div>
+
+@section scripts{
+	<script>
+		function showReviewDialog(id) {
+			$('.dialog-wrapper').removeClass('hidden');
+			$('.review').addClass('hidden');
+			$(`.review[data-id="${id}"]`).removeClass('hidden');
+		}
+	</script>	
+}

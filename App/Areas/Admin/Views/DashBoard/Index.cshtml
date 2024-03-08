@@ -1,0 +1,206 @@
+﻿@model Bakery.Models.ViewModels.DashBoardVM
+
+@{
+	ViewBag.Title = "Index";
+}
+
+<h2>Thống kê</h2>
+
+<form method="get" id="frm">
+	@*<input type="date" name="date" value="" />*@
+	<div class="row mt-4">
+		<div class="col-5 m-row">
+			<label class="me-3">Chọn ngày</label>
+			@Html.EditorFor(model => model.date, new { htmlAttributes = new { @class = "form-control", type = "date", onchange = "submitFrm()" } })
+		</div>
+		<div class="col-2"></div>
+		<div class="col-5 m-row">
+			<label class="me-3">Phạm vi</label>
+			@Html.DropDownList("chartOption", null, null, htmlAttributes: new { @class = "form-control", onchange = "submitFrm()" })
+		</div>
+	</div>
+</form>
+
+<hr class="pt-3 pb-3" />
+<p>@Model.fromDay.ToShortDateString() - @Model.toDay.ToShortDateString()</p>
+<div class="row">
+	@{
+		var ts = Model.previousData.totalSales;
+		var ns = Model.previousData.noSales;
+		var np = Model.previousData.noProducts;
+		var p = Request.Params;
+		var s = (new[] { "hôm trước", "tuần trước", "tháng trước", "năm trước" })[int.Parse(String.IsNullOrEmpty(p["chartOption"])? "0": p["chartOption"])];
+	}
+	<div class="col-3 me-5 border-bottom border-5 border-info p-3" style="background-color: whitesmoke">
+		<p class="text-secondary fs-5">Tổng thu</p>
+		<p class="fs-3">@Model.currentData.totalSales.ToString("N0")đ</p>
+		@if (ts > 0) {
+			<i>Đạt @(Math.Round(Model.currentData.totalSales * 1.0f / ts * 100))% của</i>
+		} else { 
+			<i>không có dữ liệu của</i>
+		}
+		<i>@s</i>
+	</div>
+	<div class="col-3 me-5 border-bottom border-5 border-warning p-3" style="background-color: whitesmoke">
+		<p class="text-secondary fs-5">Số lượt mua</p>
+		<p class="fs-3">@Model.currentData.noSales</p>
+		@if (ns > 0)
+		{
+			<i>Đạt @Math.Round(Model.currentData.noSales * 1.0f / ns * 100)% của</i>
+		}
+		else
+		{
+			<i>không có dữ liệu của</i>
+		}
+		<i>@s</i>
+	</div>
+	<div class="col-3 me-5 border-bottom border-5 border-success p-3" style="background-color: whitesmoke">
+		<p class="text-secondary fs-5">Số sản phẩm bán</p>
+		<p class="fs-3">@Model.currentData.noProducts</p>
+		@if (np > 0)
+		{
+			<i>Đạt @Math.Round(Model.currentData.noProducts * 1.0f / np * 100)% của</i>
+		}
+		else
+		{
+			<i>không có dữ liệu của</i>
+		}
+		<i>@s</i>
+	</div>
+</div>
+
+<hr class="pt-3 pb-3" />
+@if (Model.chartData.Count() > 0) { 
+	<canvas id="chart"></canvas>
+}
+
+<hr class="pt-3 pb-3"/>
+<div class="row">
+	<div class="col-5">
+		<h3>Sản phẩm bán chạy</h3>
+		<table class="table mt-3">
+			<tr class="table-info row">
+				<th class="col-2">
+					Mã sp
+				</th>
+				<th class="col-6">
+					Tên sp
+				</th>
+				<th class="col-4">
+					Số sp bán được
+				</th>
+			</tr>
+
+			@foreach (var x in Model.products)
+			{
+				<tr class="row">
+					<td class="col-2">@x.MaSP</td>
+					<td class="col-6">@x.TenSP</td>
+					<td class="col-4">@x.c</td>
+				</tr>
+			}
+		</table>
+		
+	</div>
+	<div class="col-2"></div>
+	<div class="col-5">
+		<h3>Sản phẩm bán không chạy</h3>
+		<table class="table mt-3">
+			<tr class="table-info row">
+				<th class="col-2">
+					Mã sp
+				</th>
+				<th class="col-6">
+					Tên sp
+				</th>
+				<th class="col-4">
+					Số sp bán được
+				</th>
+			</tr>
+
+			@foreach (var x in Model.products2)
+			{
+				<tr class="row">
+					<td class="col-2">@x.MaSP</td>
+					<td class="col-6">@x.TenSP</td>
+					<td class="col-4">@x.c</td>
+				</tr>
+			}
+		</table>
+	</div>
+	
+</div>
+
+
+<script>
+	window.onload = function () {
+		var jsdata = @Html.Raw(Json.Encode(Model.chartData));
+		console.log(jsdata);
+		loadChart();
+	}
+
+	function submitFrm() {
+		$('#frm').submit();
+	}
+
+	function loadChart() {
+		var chart = document.getElementById('chart');
+		var chartData = @Html.Raw(Json.Encode(Model.chartData));
+
+		var myChart = new Chart(chart, {
+			type: 'bar',
+			data: {
+				labels: chartData.map(x => x.label),
+				datasets: [
+					{
+						label: 'Tổng hóa đơn',
+						yAxisID: 'Y1',
+						type: 'line',
+						backgroundColor: 'white',
+						borderColor: 'rgb(7, 171, 15)',
+						data: chartData.map(x => x.totalSales)
+					},
+					{
+						label: 'Số sản phẩm',
+						yAxisID: 'Y2',
+						backgroundColor: 'rgba(53, 45, 214, .5)',
+						data: chartData.map(x => x.noProducts)
+					},
+					{
+						label: 'Số lượt mua',
+						yAxisID: 'Y2',
+						backgroundColor: 'rgba(184, 194, 8, .5)',
+						data: chartData.map(x => x.noSales)
+					}
+				]
+			},
+			options: {
+				responsive: true,
+				plugins: {
+					legend: {
+						position: 'top'
+					},
+					title: {
+						display: true,
+						text: 'Biểu đồ thống kê mua hàng @Model.fromDay.ToShortDateString() - @Model.toDay.ToShortDateString()',
+						position: 'bottom',
+						font: {
+							size: 24,
+						}
+					},
+				},
+				scales: {
+					Y1: {
+						type: 'linear',
+						position: 'right',
+					},
+					Y2: {
+						type: 'linear',
+						position: 'left'
+					}
+				}
+			}
+		});
+	}
+
+</script>

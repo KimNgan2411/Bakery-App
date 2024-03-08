@@ -1,0 +1,115 @@
+﻿@model List<Bakery.Models.sp_ds_gioHang_Result>
+
+@{
+	ViewBag.Title = "Index";
+}
+
+@section Styles {
+	<link href="~/Content/styles/giohang.css" rel="stylesheet" type="text/css" />
+}
+
+<h2>Index</h2>
+
+<table class="table">
+	<tr>
+		<th>
+			@Html.DisplayNameFor(model => model[0].TenSP)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model[0].SoLuong)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model[0].GiaSP)
+		</th>
+		<th>Tong</th>
+		<th></th>
+	</tr>
+
+	@for (int i = 0; i < Model.Count(); i++)
+	{
+		<tr data-ind="@i" class="item">
+			<td>
+				@Html.DisplayFor(modelItem => Model[i].TenSP)
+			</td>
+			<td>
+				@Html.EditorFor(model => Model[i].SoLuong,
+					new
+					{
+						htmlAttributes = new
+						{
+							min = 1,
+							max = Model[i].SoluongSP,
+							@class = "quantity",
+							onchange = String.Format($"onCartQuantityChange(event, {Model[i].MaSP}); calcPrice();"),
+							onkeydown = "onQuantityKeydown(event)"
+						}
+					})
+				<span>/@Model[i].SoluongSP</span>
+			</td>
+			<td>
+				@if (Model[i].NgayKT.HasValue)
+				{
+					<del>@Model[i].GiaSP</del>
+					<span class="price">@(Model[i].GiaSP * (1-Model[i].TiLeKM))</span>
+				}
+				else
+				{
+					<span class="price">@Html.DisplayFor(modelItem => Model[i].GiaSP, new { HtmlAttribute = new { @class = "price" } })</span>
+				}
+			</td>
+			<td class="sum">0</td>
+			<td>
+				<div onclick="removeItem(@Model[i].MaSP)">X</div>
+			</td>
+		</tr>
+	}
+
+	<button id="btnCheckout" onclick="showCheckoutConfirmDialog()">Thanh toan</button>
+	<div class="dialog-wrapper hidden">
+		<div class="dialog-content">
+			<form action="giohangs/checkout" method="post" id="frm-checkout">
+				<h3>Form xac nhan thanh toan</h3>
+				<div>Tong Tien: <span id="total-2">0</span></div>
+				<label>Dia chi: </label>
+				<input type="text" placeholder="Nhap dia chi" name="addr" value="" required />
+				<input type="submit" value="Xac nhan" />
+			</form>
+		</div>
+	</div>
+
+</table>
+<div>Tong Tien: <span id="total">0</span></div>
+
+@section scripts {
+	<script>
+
+		$(document).ready(() => {
+			calcPrice();
+		})
+
+		function calcPrice() {
+			const items = $('.item');
+			let total = 0;
+			for (let i = 0; i < items.length; i++) {
+				let price = $(`.item[data-ind='${i}'] .price`).html();
+				let quant = $(`.item[data-ind='${i}'] .quantity`).val();
+
+				total += price * quant;
+				$(`.item[data-ind='${i}'] .sum`).html(price * quant);
+			}
+
+			$('#total').html(total);
+		}
+
+		function removeItem(masp) {
+			$.post('giohangs/RemoveItem', { masp }, () => {
+				window.location.reload();
+			});
+		}
+
+		function showCheckoutConfirmDialog() {
+			$('.dialog-wrapper').removeClass('hidden')
+			$('#total-2').html($('#total').html());
+		}
+	</script>
+}

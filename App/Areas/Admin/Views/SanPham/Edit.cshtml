@@ -1,0 +1,112 @@
+﻿@model Bakery.Models.sp_ChiTietSP_Result
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chỉnh sửa</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+	<hr />
+	@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+	@Html.HiddenFor(model => model.MaSP)
+
+	<div class="form-group">
+		<label for="TenSP">Tên SP</label>
+		<div class="col-md-10">
+			@Html.EditorFor(model => model.TenSP, new { htmlAttributes = new { @class = "form-control" } })
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="GiaSP">Giá</label>
+		<div class="col-md-10">
+			@Html.EditorFor(model => model.GiaSP, new { htmlAttributes = new { @class = "form-control" } })
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="MotaSP">Mô tả</label>
+		<div class="col-md-10">
+			@Html.EditorFor(model => model.MotaSP, new { htmlAttributes = new { @class = "form-control" } })
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="img">Hình ảnh</label>
+		<div class="col-md-10">
+			@Html.EditorFor(model => model.img, new { htmlAttributes = new { @class = "form-control" } })
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="Sao">Số sao</label>
+		<div class="col-md-10">
+			@Html.EditorFor(model => model.Sao, new { htmlAttributes = new { @class = "form-control" } })
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="SoLuotDanhGia">Số đánh giá</label>
+		<div class="col-md-10">
+			@Html.EditorFor(model => model.SoLuotDanhGia, new { htmlAttributes = new { @class = "form-control" } })
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="SoluongSP">Số lượng</label>
+		<div class="col-md-10">
+			@Html.EditorFor(model => model.SoluongSP, new { htmlAttributes = new { @class = "form-control" } })
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="maLoai">Loại SP</label>
+		<div class="col-md-10">
+			@Html.DropDownList("maLoai", null, htmlAttributes: new { @class = "form-control" })
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="MaKM">Khuyến mãi</label>
+		<div class="col-md-10">
+			@Html.DropDownList("MaKM", null, "Không", htmlAttributes: new { @class = "form-control" })
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="tinhTrang">Tình trạng</label>
+		<div class="col-md-10">
+			@Html.DropDownList("tinhTrang", null, htmlAttributes: new { @class = "form-control" })
+		</div>
+	</div>
+
+	<div class="error text-danger">@ViewBag.ErrorMsg</div>
+
+	<div class="form-group">
+		<button type="submit" class="btn btn-primary mb-3 mt-3">Lưu</button>
+	</div>
+
+</div>
+}
+
+<form method="post" action="@Url.Action("Delete", new {id = Model.MaSP})" onsubmit="onDelete(event)">
+	@Html.AntiForgeryToken()
+	<button type="submit" class="btn btn-danger mb-3">Xóa</button>
+</form>
+
+<div>
+    @Html.ActionLink("Quay lại", "Index")
+</div>
+
+<script>
+	function onDelete(e) {
+		if (confirm('Xóa sản phẩm?')) return;
+		e.preventDefault();
+	}
+</script>

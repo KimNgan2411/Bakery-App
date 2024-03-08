@@ -1,0 +1,39 @@
+﻿@model Bakery.Models.ViewModels.SignUpVM
+
+@{
+	ViewBag.Title = "Create";
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Tạo mới</h2>
+
+@using (Html.BeginForm())
+{
+	@Html.AntiForgeryToken()
+	<label>Họ tên</label>
+	@Html.EditorFor(model => model.TenKH, new { htmlAttributes = new { @class = "form-control" } })
+	<div class="gender">
+		<label>Giới tính: </label>
+		<input type="radio" name="GioiTinh" value="1" id="male" />
+		<label for="male">Nam</label>
+		<input type="radio" name="GioiTinh" value="0" id="female" />
+		<label for="female">Nữ</label>
+		<input type="radio" name="GioiTinh" value="2" id="no" />
+		<label for="no">Khác</label>
+	</div>
+	<label>Số điện thoại</label>
+	@Html.EditorFor(model => model.SoDienThoai, new { htmlAttributes = new { @class = "form-control" } })
+	<label>Ngày sinh</label>
+	@Html.EditorFor(model => model.NgaySinh, new { htmlAttributes = new { @class = "form-control", type = "date" } })
+	<label>Tên tài khoản</label>
+	@Html.EditorFor(model => model.TaiKhoan, new { htmlAttributes = new { @class = "form-control" } })
+	<label>Mật khẩu</label>
+	@Html.EditorFor(model => model.MatKhau, new { htmlAttributes = new { @class = "form-control", type = "password" } })
+
+<input type="submit" value="Xác nhận" class="btn btn-primary mt-3 mb-3" />
+}
+<div class="error" style="color:red;">@ViewBag.ErrorMsg</div>
+
+<div>
+	@Html.ActionLink("Quay lại", "Index")
+</div>

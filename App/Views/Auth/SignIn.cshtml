@@ -1,0 +1,28 @@
+﻿
+@{
+	ViewBag.Title = "SignIn";
+}
+
+@section Styles {
+	<link href="~/Content/styles/dangnhap.css" rel="stylesheet" type="text/css" />
+}
+
+
+<div class="login-page">
+	<div class="main">
+		<div class="title">ĐĂNG NHẬP</div>
+		@using (Html.BeginForm("SignIn", "Auth", new { ReturnUrl = ViewBag.ReturnUrl } , FormMethod.Post))
+		{
+			<label>Tài khoản</label>
+			<input type="text" name="user" />
+			<label>Mật khẩu</label>
+			<input type="password" name="pass" />
+			<input type="submit" value="Gửi" />
+		}
+		<div class="signup">
+			Chưa có tài khoản?
+			@Html.ActionLink("Đăng ký ngay", "Create", "KhachHangs")
+		</div>
+		<div class="error">@ViewBag.ErrorMsg</div>
+	</div>
+</div>

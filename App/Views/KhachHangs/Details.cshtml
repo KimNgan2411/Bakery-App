@@ -1,0 +1,143 @@
+﻿@model Bakery.Models.ViewModels.CTKHVM
+
+@{
+	ViewBag.Title = "Details";
+}
+
+@section Styles {
+	<link href="~/Content/styles/ctkh.css" rel="stylesheet" type="text/css" />
+}
+
+<div class="user-page">
+	<div class="top">
+		THÔNG TIN CÁ NHÂN
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/2048px-Circle-icons-profile.svg.png"
+			 alt="" class="avatar">
+	</div>
+
+	<div class="m-container">
+		<div class="info">
+			<div class="m-row">
+				<div class="name">Tên: <span class="value">@Model.kh.TenKH</span></div>
+				<div class="gender">Giới tính: @Model.kh.GioiTinh</div>
+			</div>
+			<div class="m-row">
+				<div class="phone">sdt: @Model.kh.SoDienThoai</div>
+				<div class="date">Ngày sinh: @Model.kh.NgaySinh.Value.ToShortDateString()</div>
+			</div>
+		</div>
+
+		<div class="history">
+
+			<div class="title">Lịch sử mua hàng:</div>
+			@if (Model.hds.Count() < 1) { 
+				<p><i>Chưa mua bao giờ</i></p>
+			}
+			@foreach (var x in Model.hds)
+			{
+				<div class="item">
+					<div class="date">@x.hd.NgayHD.Value.ToShortDateString()</div>
+					<div class="state">@(x.hd.TinhTrangGiao.HasValue && x.hd.TinhTrangGiao.Value? "Đã giao" : "Chưa giao")</div>
+					<ul>
+						@foreach (var y in x.cthds)
+						{
+							<li>
+								<span class="name">@y.TenSP</span>
+								- <span class="price">@string.Format("{0:N0}", (y.DonGia - (y.GiamGia.HasValue ? y.GiamGia : 0)))đ</span>
+								x <span class="quantity">@y.SoLuong</span>
+							</li>
+						}
+					</ul>
+
+					@if (x.hd.TinhTrangGiao.HasValue && x.hd.TinhTrangGiao.Value)
+					{
+						if (x.cthds.Any(y => y.SoSaoDanhGia.HasValue))
+						{
+							<div class="review-btn btn btn-info" onclick="showReviewDialog(@x.hd.MaHD)">Đã đánh giá</div>
+						}
+						else
+						{
+							<div class="review-btn btn btn-primary" onclick="showReviewDialog(@x.hd.MaHD)">Đánh giá</div>
+						}
+					}
+					else
+					{
+						<p class="review-msg">Chưa giao</p>
+					}
+
+					<h3>Tổng tiền: @string.Format("{0:N0}", x.hd.TongTien)đ</h3>
+				</div>
+			}
+		</div>
+	</div>
+</div>
+
+<div class="dialog-wrapper hidden">
+	<div class="dialog-content p-5">
+		<h2>Đánh giá sản phẩm</h2>
+		@foreach (var x in Model.hds)
+		{
+			<form class="review hidden" method="post" action="AddReview" data-id="@x.hd.MaHD">
+				@for (int i = 0; i < x.cthds.Count(); i++)
+				{	
+					<hr />
+					<input type="number" name="[@i].MaSP" value="@x.cthds[i].MaSP" hidden />
+					<input type="number" name="[@i].MaHD" value="@x.cthds[i].MaHD" hidden />
+					<div class="mb-3"><b>@x.cthds[i].TenSP</b></div>
+					<div class="mb-3 stars-number" data-id="@x.cthds[i].MaSP">
+						<label>Số sao: </label>
+						<span class="stars">
+							@for (int j = 1; j <= 5; j++) { 
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" onclick="onStar(@x.hd.MaHD, @x.cthds[i].MaSP, @j, @x.cthds[i].SoSaoDanhGia.HasValue)"
+									 class="icon star @(j <= (x.cthds[i].SoSaoDanhGia.HasValue? @x.cthds[i].SoSaoDanhGia.Value: 5)? "yellow": "grey") " style="cursor: pointer;">
+									<path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+								</svg>
+							}
+						</span>
+						<input type="number" name="[@i].SoSaoDanhGia" min="1" max="5"
+							   value="@(x.cthds[i].SoSaoDanhGia.HasValue? @x.cthds[i].SoSaoDanhGia.Value: 5)" 
+							   disabled="@x.cthds[i].SoSaoDanhGia.HasValue" hidden/>
+					</div>
+					<div>
+						<label>Nội dung đánh giá:</label> <br />
+						<input type="text" name="[@i].NoiDungDanhGia" style="width: 100%" 
+							   value="@x.cthds[i].NoiDungDanhGia" disabled="@x.cthds[i].SoSaoDanhGia.HasValue"/>
+					</div>
+				}
+				@if (x.cthds.FirstOrDefault() != null && !x.cthds.FirstOrDefault().SoSaoDanhGia.HasValue) { 
+					<input type="submit" class="btn btn-primary mt-3" value="Gửi đánh giá" style="float: right;" />
+				}
+			</form>
+		}
+	</div>
+</div>
+
+@section scripts{
+	<script>
+		function showReviewDialog(id) {
+			$('.dialog-wrapper').removeClass('hidden');
+			$('.review').addClass('hidden');
+			$(`.review[data-id="${id}"]`).removeClass('hidden');
+		}
+
+		function onStar(mahd, masp, newVal, disable) {
+			if (disable) return;
+			let inputEl = $(`.review[data-id=${mahd}] .stars-number[data-id=${masp}] input[type='number']`);
+			if (inputEl.val() == newVal) return;
+			inputEl.val(newVal);
+			let stars = $(`.review[data-id=${mahd}] .stars-number[data-id=${masp}] .stars svg`);
+			for (let i = 0; i <= stars.length; i++) {
+				if (i + 1 <= newVal) {
+					$(stars[i]).addClass('yellow')
+					$(stars[i]).removeClass('grey');
+				} else {
+					$(stars[i]).addClass('grey')
+					$(stars[i]).removeClass('yellow');
+				}
+			}
+		}
+	</script>
+}
+
+
+

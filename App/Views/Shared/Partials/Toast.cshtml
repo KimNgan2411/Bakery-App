@@ -1,0 +1,37 @@
+﻿<!-- toast -->
+@if (ViewBag.ToastHeader != null)
+{
+	<div class="position-fixed bottom-0 end-0 pe-4 pb-5" style="z-index: 11">
+		<div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="4000">
+			<div class="toast-header">
+				@if (ViewBag.ToastTheme == "Danger")
+				{
+					<svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512" class="me-3">
+						<path style="fill: red;" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z" />
+					</svg>
+					<strong class="me-auto text-danger">
+						@ViewBag.ToastHeader
+					</strong>
+				}
+				else
+				{
+					<svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512" class="me-3">
+						<path style="fill: green;" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z" />
+					</svg>
+					<strong class="me-auto text-success">
+						@ViewBag.ToastHeader
+					</strong>
+				}
+
+				<small>@DateTime.Now.ToString("HH:mm:ss")</small>
+				<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+			</div>
+			@if (ViewBag.ToastBody != null)
+			{
+				<div class="toast-body">
+					@ViewBag.ToastBody
+				</div>
+			}
+		</div>
+	</div>
+}

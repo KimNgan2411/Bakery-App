@@ -1,0 +1,131 @@
+﻿@model List<Bakery.Models.sp_ds_gioHang_Result>
+
+@{
+	ViewBag.Title = "Index";
+}
+
+@section Styles {
+	<link href="~/Content/styles/giohang.css" rel="stylesheet" type="text/css" />
+}
+
+<div class="cart-page">
+	<div class="m-container">
+		@if (Model.Count > 0)
+		{
+			<div class="cart">
+				<div class="row header">
+					<div class="col-2"></div>
+					<div class="col-3">Sản phẩm</div>
+					<div class="col-2">Giá</div>
+					<div class="col-2">Số lượng</div>
+					<div class="col-2">Tổng</div>
+					<div class="col-1"></div>
+				</div>
+
+				@for (int i = 0; i < Model.Count(); i++)
+				{
+					double price = Model[i].GiaSP;
+					if (Model[i].TiLeKM.HasValue) { price = price * (1 - Model[i].TiLeKM.Value); }
+					<div class="row item" data-ind="@i">
+						<div class="col-2">
+							<a href="@Url.Action("details", "SanPhams", new { id = Model[i].MaSP })">
+								<div class="img-wrapper">
+									<img src="@Model[i].img" alt="">
+								</div>
+							</a>
+						</div>
+						<div class="col-3">@Model[i].TenSP</div>
+						<div class="col-2 price" data-val="@price">@string.Format("{0:N0}", price)đ</div>
+						<div class="col-2">
+							<input type="number" class="quantity" value="@Model[i].SoLuong" min="1" max="@Model[i].SoluongSP"
+								   onkeydown="onQuantityKeydown(event)" onchange="onCartQuantityChange(event, @Model[i].MaSP); calcPrice();" />
+							/ @Model[i].SoluongSP
+						</div>
+						<div class="col-2 sum">
+
+						</div>
+						<div class="col-1 remove" onclick="removeItem(@Model[i].MaSP)">
+							X
+						</div>
+					</div>
+				}
+			</div>
+
+			<div class="dialog-wrapper hidden">
+				<div class="dialog-content">
+					<form action="giohangs/checkout" method="post" id="frm-checkout">
+						<h3>Xác nhận thanh toán</h3>
+						<div class="amount">Số tiền: <span id="total-2">0</span></div>
+						<label>Địa chỉ: </label>
+						<input type="text" placeholder="Nhập địa chỉ" name="addr" value="" required />
+						<input type="submit" value="Xác nhận" />
+					</form>
+				</div>
+			</div>
+
+			<div class="m-row">
+				<div class="flex-fill"></div>
+				<div class="checkout">
+					<div class="total">
+						Tổng tiền: <span class="value" id="total"></span>
+					</div>
+
+					<div class="m-row">
+						<div class="flex-fill"></div>
+						<button class="pay" onclick="showCheckoutConfirmDialog()">Thanh toán</button>
+					</div>
+				</div>
+			</div>
+		}
+		else
+		{
+			<div class="empty">
+				<div>
+					<h2>Giỏ hàng của bạn đang bị <span class="sp">trống</span></h2>
+					<h2>Hãy lấp đầy nó với tình yêu đồ ngọt nào! <span class="sp">@Html.ActionLink("Mua hàng", "Index", "Sanphams")</span></h2>
+					<img src="~/Content/imgs/pororo.png" />
+				</div>
+			</div>
+		}
+
+	</div>
+</div>
+
+
+@section scripts {
+	<script>
+
+		$(document).ready(() => {
+			calcPrice();
+		})
+
+		function numberWithCommas(x) {
+			return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		}
+
+		function calcPrice() {
+			const items = $('.row.item');
+			let total = 0;
+			for (let i = 0; i < items.length; i++) {
+				let price = $(`.item[data-ind='${i}'] .price`).data('val');
+				let quant = $(`.item[data-ind='${i}'] .quantity`).val();
+
+				total += price * quant;
+				$(`.item[data-ind='${i}'] .sum`).html(numberWithCommas(price * quant) + 'đ');
+			}
+
+			$('#total').html(numberWithCommas(total) + 'đ');
+		}
+
+		function removeItem(masp) {
+			$.post('giohangs/RemoveItem', { masp }, () => {
+				window.location.reload();
+			});
+		}
+
+		function showCheckoutConfirmDialog() {
+			$('.dialog-wrapper').removeClass('hidden')
+			$('#total-2').html($('#total').html());
+		}
+	</script>
+}

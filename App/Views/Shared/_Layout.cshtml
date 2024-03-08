@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewBag.Title - My ASP.NET Application</title>
+
+	@*fonts*@
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Lexend&family=Nunito&family=Poppins&family=Quicksand&display=swap" rel="stylesheet">
+
+	@*Bootstrap*@
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/bundles/modernizr")
+	@RenderSection("Styles", required: false)
+</head>
+<body>
+	@{var p = Request.Params;}
+	<!-- shared nav -->
+	<div class="m-nav font-quicksand">
+		<form action="/SanPhams" method="get" id="product-frm"></form>
+		<input type="number" form="product-frm" id="product-page-number" name="page" value="1" hidden />
+		<div class="m-row">
+			<div class="left">
+				@*@Html.ActionLink("TRANG CHỦ", "Index", "Home", new { area = "" }, new { @class = "item" })*@
+				@Html.ActionLink("TRANG CHỦ", "Index", "Home", new { area = "" }, new { @class = "item" })
+				@Html.ActionLink("SẢN PHẨM", "Index", "SanPhams", new { area = "" }, new { @class = "item" })
+				@Html.ActionLink("KHUYẾN MÃI", "Index", "KhuyenMais", new { area = "" }, new { @class = "item" })
+			</div>
+			<div class="middle logo">
+				<a href="@Url.Action("Index", "Home")"><div><span class="yellow">yellow</span>kitchen</div></a>
+			</div>
+			<div class="right">
+				<div class="search me-3">
+					<button form="product-frm" class="icon">
+						<svg xmlns="http://www.w3.org/2000/svg"
+							 viewBox="0 0 512 512">
+							<path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+						</svg>
+					</button>
+					<input id="search" form="product-frm" name="keyword" type="text" placeholder="Bạn muốn tìm gì?" value="@p["keyword"]">
+				</div>
+
+				@if (Session["Role"] == "Customer" && Session["CustomerID"] != null)
+				{
+					<a href="@Url.Action("Index", "GioHangs")" class="m-row me-3 position-relative">
+						<img src="~/Content/imgs/cart-icon.png" alt="Alternate Text" title="Giỏ hàng" class="icon" />
+						@Html.Action("GetCartInfo", "Nav")
+					</a>
+					<a href="@Url.Action("Details", "KhachHangs")" class="m-row me-3">
+						<img src="~/Content/imgs/user-icon.png" alt="Alternate Text" class="icon" />
+						@Html.Action("GetUsername", "Nav")
+					</a>
+				}
+
+				@if (Session["Role"] == null)
+				{
+					<text>@Html.ActionLink("Đăng nhập", "SignIn", "Auth", new { area = "", ReturnUrl = Request.Url.ToString() }, new { @class = "item login" })</text>
+
+				}
+				@if (Session["Role"] != null)
+				{
+					@*<text>@Html.ActionLink("Đăng xuất", "SignOut", "Auth", new { area = "" }, new { @class = "item login" })</text>*@
+					<a href="@Url.Action("SignOut", "Auth")" class="item" title="Đăng xuất">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon">
+							<path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 192 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z" />
+						</svg>
+					</a>
+				}
+			</div>
+		</div>
+	</div>
+
+	<!-- end nav -->
+	@RenderBody()
+
+	@Html.Partial("~/Views/Shared/Partials/Toast.cshtml")
+
+	<div class="footer">
+		<div class="m-container">
+			<div class="sections">
+				<div class="section-1 section">
+					<div class="content">
+						<div>
+							<div class="logo line font-quicksand"><div><span class="yellow">yellow</span>kitchen</div></div>
+							<p>
+								Mỗi tháng chúng tôi đều có những đợt giảm giá dịch vụ và sản phẩm nhằm tri ân khách hàng.
+							</p>
+						</div>
+						<div>
+							© Copyright yellokitchen
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="content">
+						<div class="header line">Chính sách</div>
+						<div class="line">Nhanh chóng</div>
+						<div class="line">Dễ dàng</div>
+						<div class="line">Ngon</div>
+						<div>Rất ngon</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="content">
+						<div class="header line">Liên hệ</div>
+						<div class="line">
+							<img src="~/Content/imgs/location-icon.png" alt="Alternate Text" class="icon" />
+							<span>828 Sư Vạn Hạnh, Quận 10</span>
+						</div>
+						<div class="line">
+							<img src="~/Content/imgs/email-icon.png" alt="Alternate Text" class="icon" />
+							<span>info@yellowkitchen.com</span>
+						</div>
+						<div>
+							<img src="~/Content/imgs/phone-icon.png" alt="Alternate Text" class="icon" />
+							<span>(098) 765-4321</span>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="content">
+						<div class="line header">Đôi lời tâm sự</div>
+						<div>Bánh ngon lắm, mua đi</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/bootstrap")
+	@Scripts.Render("~/bundles/myScripts")
+	@RenderSection("scripts", required: false)
+</body>
+</html>

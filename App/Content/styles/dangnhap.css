@@ -1,0 +1,64 @@
+﻿.login-page {
+	min-height: 90vh;
+	display: flex;
+	/*justify-content: center;*/
+	align-items: center;
+	background-color: white;
+	/*background-image: url('https://hirasweets.com/wp-content/uploads/revslider/bakery/bakery-wallpaper-hd-1.jpg');*/
+	background-image: url('../imgs/login-bg.png');
+	background-size: cover;
+	background-position: center;
+	font-size: 12px;
+}
+
+	.login-page .main {
+		background-color: rgba(255, 255, 255, 0.5);
+		/*background-color: rgba(0,0,0, .5);*/
+		border-radius: 20px;
+		padding: 50px;
+		font-size: 1.5em;
+		margin: 50px;
+	}
+
+		.login-page .main .title {
+			font-size: 2em;
+			font-weight: bold;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		.login-page .main form {
+			display: grid;
+		}
+
+			.login-page .main form input {
+				margin-bottom: 10px;
+				padding: 10px 20px;
+				width: 100%;
+			}
+
+		.login-page .main .signup a {
+			color: purple;
+		}
+
+			.login-page .main .signup a:hover {
+				text-decoration: underline;
+			}
+
+		.login-page .main .error {
+			margin-top: 10px;
+			color: red;
+			font-style: italic;
+			max-width: 300px;
+		}
+
+.submit {
+	background-color:aqua;
+}
+
+.gender {
+	display: flex;
+	align-items: baseline;
+	font-size: 16px;
+	white-space: nowrap;
+}

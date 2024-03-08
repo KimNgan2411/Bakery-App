@@ -1,0 +1,78 @@
+﻿@model Bakery.Models.SanPham
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Tạo mới</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+	<hr />
+	@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+	<div class="form-group">
+		<label for="TenSP">Tên SP</label>
+		<div class="col-md-10">
+			@Html.EditorFor(model => model.TenSP, new { htmlAttributes = new { @class = "form-control" } })
+			@*@Html.ValidationMessageFor(model => model.TenSP, "", new { @class = "text-danger" })*@
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="GiaSP">Đơn giá</label>
+		<div class="col-md-10">
+			@Html.EditorFor(model => model.GiaSP, new { htmlAttributes = new { @class = "form-control" } })
+			@*@Html.ValidationMessageFor(model => model.GiaSP, "", new { @class = "text-danger" })*@
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="MotaSP">Mô tả</label>
+		<div class="col-md-10">
+			@Html.EditorFor(model => model.MotaSP, new { htmlAttributes = new { @class = "form-control" } })
+			@*@Html.ValidationMessageFor(model => model.MotaSP, "", new { @class = "text-danger" })*@
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="img">Hình ảnh</label>
+		<div class="col-md-10">
+			@Html.EditorFor(model => model.img, new { htmlAttributes = new { @class = "form-control" } })
+			@*@Html.ValidationMessageFor(model => model.img, "", new { @class = "text-danger" })*@
+		</div>
+	</div>
+
+
+	<div class="form-group">
+		<label for="SoluongSP">Số lượng</label>
+		<div class="col-md-10">
+			@Html.EditorFor(model => model.SoluongSP, new { htmlAttributes = new { @class = "form-control" } })
+			@*@Html.ValidationMessageFor(model => model.SoluongSP, "", new { @class = "text-danger" })*@
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="maLoai">Loại SP</label>
+		<div class="col-md-10">
+			@Html.DropDownList("maLoai", null, htmlAttributes: new { @class = "form-control" })
+			@*@Html.ValidationMessageFor(model => model.maLoai, "", new { @class = "text-danger" })*@
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-md-offset-2 col-md-10">
+			<input type="submit" value="Xác nhận" class="btn btn-primary mt-3 mb-3" />
+		</div>
+	</div>
+
+	<div class="error text-danger">@ViewBag.ErrorMsg</div>
+</div>
+}
+
+<div>
+	@Html.ActionLink("Quay lại", "Index")
+</div>

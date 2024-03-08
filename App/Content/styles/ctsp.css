@@ -1,0 +1,206 @@
+﻿.product-detail-page .m-container {
+	width: 85vw;
+	padding: 30px 90px 60px;
+	border: 1px solid black;
+	box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+	margin: 80px auto;
+}
+
+.product-detail-page .product-info {
+	display: flex;
+	justify-content: space-between;
+	height: 90vh;
+	margin-bottom: 20px;	
+}
+
+	.product-detail-page .product-info .left {
+		flex-basis: 30%;
+		display: flex;
+		flex-direction: column;
+		align-items: baseline;
+	}
+
+		.product-detail-page .product-info .left .img-wrapper {
+			width: 400px;
+			height: 400px;
+		}
+
+		.product-detail-page .product-info .left .name {
+			font-size: 1.5em;
+			font-weight: 600;
+		}
+
+		.product-detail-page .product-info .left .price {
+			font-size: 2em;
+			font-weight: bold;
+		}
+
+			.product-detail-page .product-info .left .price del,
+			.product-detail-page .product-info .left .price i {
+				font-size: 16px;
+				font-weight: normal;
+				color: grey;
+			}
+
+			.product-detail-page .product-info .left .rate {
+				display: flex;
+				align-items: center;
+			}
+
+			.product-detail-page .product-info .left .rate img {
+				margin: 0 5px;
+			}
+
+		.product-detail-page .product-info .left .quantity .btn {
+			cursor: pointer;
+			/*box-shadow: 0px 2px 16px rgba(60, 62, 74, 0.08);*/
+			border: 1px solid grey;
+			padding: 0 10px;
+			margin: 5px;
+		}
+
+		.product-detail-page .product-info .left .quantity .btn.remove {
+			color: grey;
+			border-color: grey;
+			margin-left: 20px;
+		}
+
+		.product-detail-page .product-info .left .add {
+			color: white;
+			background-color: #FB9333;
+			padding: 8px 16px;
+			border-radius: 100px;
+			cursor: pointer;
+			margin-bottom: 5px;
+		}
+
+		.product-detail-page .product-info .left .desc {
+			flex: 1;
+			overflow: auto;
+		}
+
+	.product-detail-page .product-info .right {
+		flex-basis: 50%;
+		display: flex;
+		height: 600px;
+	}
+
+		.product-detail-page .product-info .right .block-1 {
+			height: 100%;
+			flex: 1;
+			background-image: var(--bg);
+			margin-right: 15px;
+			background-position: left;
+			background-size: 600px 600px;
+		}
+
+		.product-detail-page .product-info .right .block-2-3 {
+			height: 100%;
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+		}
+
+			.product-detail-page .product-info .right .block-2-3 .block-2 {
+				flex: 1;
+				background-image: var(--bg);
+				margin-bottom: 15px;
+				background-size: 600px 600px;
+				background-position: right top;
+			}
+
+			.product-detail-page .product-info .right .block-2-3 .block-3 {
+				flex: 1;
+				background-image: var(--bg);
+				background-size: 600px 600px;
+				background-position: bottom right;
+			}
+
+.product-detail-page .reviews {
+	display: flex;
+	margin-top: 80px;
+	background-color: #FFF6EA;
+	padding: 40px;
+	height: 70vh;
+}
+
+	.product-detail-page .reviews .left {
+		flex-basis: 30%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+		.product-detail-page .reviews .left .title {
+			font-size: 3em;
+			font-weight: 600;
+		}
+
+			.product-detail-page .reviews .left .title .special {
+				color: #FB9333;
+			}
+
+		.product-detail-page .reviews .left .page-number div {
+			margin-bottom: 10px;
+		}
+
+		.product-detail-page .reviews .left .page-number .current {
+			font-size: 2em;
+			font-weight: bold;
+		}
+
+		.product-detail-page .reviews .left .page-number .total {
+			color: #CCC;
+			font-size: 2em;
+		}
+
+		.product-detail-page .reviews .left .page-number .btn {
+			background-color: #FB9333;
+		}
+
+	.product-detail-page .reviews .right {
+		flex-basis: 70%;
+		display: flex;
+		justify-content: space-around;
+		height: 100%;
+	}
+
+		.product-detail-page .reviews .right .review {
+			flex-basis: 30%;
+			height: 80%;
+			margin: auto 0;
+			background-color: white;
+			border-radius: 10px;
+			padding: 20px 10px;
+			display: flex;
+			flex-direction: column;
+		}
+
+			.product-detail-page .reviews .right .review .name {
+				font-size: 1.2em;
+				font-weight: bold;
+				max-width: 200px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+
+			.product-detail-page .reviews .right .review .rate {
+				margin: 10px 0;
+				color: #FB9333;
+				display: flex;
+				align-items: center;
+			}
+
+				.product-detail-page .reviews .right .review .rate img {
+					margin-right: 10px;
+				}
+
+			.product-detail-page .reviews .right .review .comment {
+				flex: 1;
+				overflow: auto;
+				max-width: 200px;
+				overflow-wrap: break-word;
+				word-wrap: break-word;
+			}

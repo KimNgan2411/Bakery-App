@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewBag.Title - My ASP.NET Application</title>
+	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/bundles/modernizr")
+	@RenderSection("Styles", required: false)
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+		<div class="container">
+			@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+			<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+					aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+				<ul class="navbar-nav flex-grow-1">
+					<li>@Html.ActionLink("San pham", "Index", "SanPhams", new { area = "" }, new { @class = "nav-link" })</li>
+					@if (Session["Role"] == "Admin")
+					{
+						<li>@Html.ActionLink("Loai san pham", "Index", "LoaiSanPhams", new { area = "" }, new { @class = "nav-link" })</li>
+						<li>@Html.ActionLink("Khach hang", "Index", "KhachHangs", new { area = "" }, new { @class = "nav-link" })</li>
+					}
+					@if (Session["Role"] == null)
+					{
+						<li>@Html.ActionLink("Dang nhap", "SignIn", "Auth", new { area = "" }, new { @class = "nav-link" })</li>
+						<li>@Html.ActionLink("Dang ky", "Create", "KhachHangs", new { area = "" }, new { @class = "nav-link" })</li>
+					}
+					else
+					{
+						<li>@Html.ActionLink("Dang xuat", "SignOut", "Auth", new { area = "" }, new { @class = "nav-link" })</li>
+					}
+					@if (Session["Role"] == "Customer" && Session["CustomerID"] != null)
+					{
+						<li>@Html.ActionLink("Gio hang", "Index", "GioHangs", new { maKh = Session["CustomerID"] }, new { @class = "nav-link" })</li>
+						<li>@Html.ActionLink("Tai khoan", "Details", "KhachHangs", new { maKh = Session["CustomerID"] }, new { @class = "nav-link" })</li>
+					}
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container body-content">
+		@RenderBody()
+		<hr />
+		<footer>
+			<p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+		</footer>
+	</div>
+
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/bootstrap")
+	@Scripts.Render("~/bundles/myScripts")
+	@RenderSection("scripts", required: false)
+</body>
+</html>

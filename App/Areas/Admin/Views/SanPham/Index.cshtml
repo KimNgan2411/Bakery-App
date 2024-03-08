@@ -1,0 +1,177 @@
+﻿@model IEnumerable<Bakery.Models.sp_DSSP_Result>
+
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@{
+	var p = Request.Params;
+	var cates = (List<Bakery.Models.sp_ds_loaisp_Result>)ViewBag.cates;
+}
+
+<style>
+	.pager .selected {
+		color: blue;
+		text-decoration: underline;
+	}
+
+	.pager span {
+		cursor: pointer;
+	}
+
+	.search input[type="radio"]:checked + label {
+		background-color: #6c757d;
+		color: white;
+	}
+</style>
+
+<h2>Danh sách sản phẩm</h2>
+
+<button type="button" class="btn btn-primary mt-3 mb-3">@Html.ActionLink("Tạo mới", "Create")</button>
+
+<form action="" method="get" id="search-frm">
+	<input type="number" id="page-number" name="page" value="1" hidden />
+	<div class="mb-3 row search">
+		<div class="col-4">
+			<div class="input-group mb-3">
+				<span class="input-group-text" id="basic-addon3">Tìm theo tên</span>
+				<input type="text" class="form-control" name="keyword" value="@p["keyword"]" />
+			</div>
+		</div>
+
+		<div class="col-4">
+			<span>Loại: </span>
+			<select class="form-select" name="cate" style="display: inline" onchange="submitFrm()">
+				<option value="">Tất cả</option>
+				@foreach (var x in cates)
+				{
+					<option value="@x.MaLoai" @(x.MaLoai + "" == p["cate"] ? "selected" : "")>@x.TenLoai</option>
+				}
+				<option value="-1" @("-1" == p["cate"] ? "selected" : "")>Chưa phân loại</option>
+			</select>
+		</div>
+
+		<div class="col-3" onchange="submitFrm()">
+			<input id="inactive" type="radio" name="active" value="true" hidden @(p["active"] == "true" || String.IsNullOrEmpty(p["active"]) ? "checked" : "") />
+			<label for="inactive" class="btn btn-outline-secondary ms-2 me-2">Đang bán</label>
+			<input id="active" type="radio" name="active" value="false" hidden @(p["active"] == "false" ? "checked" : "") />
+			<label for="active" class="btn btn-outline-secondary">Tạm ẩn</label>
+		</div>
+
+		<div class="col-1">
+			<button class="btn btn-primary">Tìm</button>
+		</div>
+	</div>
+</form>
+
+<table class="table">
+	@if (Model.Count() < 1)
+	{
+		<tr>
+			<i>Không có sản phẩm</i>
+		</tr>
+	} else { 
+<tr class="table-info row">
+	<th class="col-1">
+		Mã SP
+	</th>
+	<th class="col-1">
+		Hình ảnh
+	</th>
+	
+	<th class="col-3">
+		Tên SP
+	</th>
+	<th class="col-1">
+		Đơn giá
+	</th>
+	<th class="col-1">
+		Số sao
+	</th>
+	<th class="col-1">
+		Số đánh giá
+	</th>
+	<th class="col-1">
+		Số lượng
+	</th>
+	<th class="col-2">
+		Loại SP
+	</th>
+	<th class="col-1"></th>
+</tr>
+	}
+	
+	@foreach (var item in Model)
+	{
+		<tr class="row">
+			<td class="col-1">
+				@item.MaSP
+			</td>
+			<td class="col-1">
+				<img src="@item.img" style="width: 100%; aspect-ratio: 1/1" />
+			</td>
+			<td class="col-3">
+				@Html.DisplayFor(modelItem => item.TenSP)
+			</td>
+			<td class="col-1">
+				@if (item.TiLeKM.HasValue)
+				{
+					<del>@string.Format("{0:N0}", item.GiaSP) đ</del>
+					<br />
+					<text>@string.Format("{0:N0}", item.GiaSP * (1 - item.TiLeKM)) đ</text>
+				}
+				else
+				{
+					<text>@string.Format("{0:N0}", item.GiaSP) đ</text>
+				}
+			</td>
+			<td class="col-1">
+				@item.Sao.ToString("#.#")
+			</td>
+			<td class="col-1">
+				@Html.DisplayFor(modelItem => item.SoLuotDanhGia)
+			</td>
+			<td class="col-1">
+				@Html.DisplayFor(modelItem => item.SoluongSP)
+			</td>
+			<td class="col-2">
+				@Html.DisplayFor(modelItem => item.TenLoai)
+			</td>
+			<td class="col-1">
+				<a href="@Url.Action("Edit", new { id = item.MaSP })">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon">
+						<path d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160V416c0 53 43 96 96 96H352c53 0 96-43 96-96V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H96z" />
+					</svg>
+				</a>
+				@*@Html.ActionLink("Edit", "Edit", new { id = item.MaSP }) |
+			@Html.ActionLink("Details", "Details", new { id = item.MaSP }) |
+			@Html.ActionLink("Delete", "Delete", new { id = item.MaSP })*@
+			</td>
+		</tr>
+	}
+
+</table>
+
+
+
+<div style="display: flex" class="pager">
+	<div style="flex: 1;"></div>
+	<div>
+		@for (int i = 1; i <= ViewBag.PageCount; i++)
+		{
+			<span href="?page=@i" class="m-1 @((i == 1 && String.IsNullOrEmpty(p["page"])) || (i + "" == p["page"]) ? "selected" : "")" onclick="changePage(@i)">@i</span>
+		}
+	</div>
+</div>
+
+<script>
+	function changePage(i) {
+		$("#page-number").val(i);
+		$("#search-frm").submit();
+	}
+
+	function submitFrm() {
+		$('#search-frm').submit();
+	}
+</script>

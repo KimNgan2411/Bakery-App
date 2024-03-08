@@ -1,0 +1,59 @@
+﻿@model Bakery.Models.KhuyenMai
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>KhuyenMai</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenKM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenKM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TiLeKM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TiLeKM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayBD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayBD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayKT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayKT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pr_img)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pr_img)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaKM }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

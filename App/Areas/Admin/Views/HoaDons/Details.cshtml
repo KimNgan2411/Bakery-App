@@ -1,0 +1,58 @@
+﻿@model Bakery.Models.HoaDon
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HoaDon</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayHD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayHD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TinhTrangGiao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TinhTrangGiao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaChiGiao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChiGiao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TongTien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TongTien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KhachHang.TenKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KhachHang.TenKH)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaHD }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

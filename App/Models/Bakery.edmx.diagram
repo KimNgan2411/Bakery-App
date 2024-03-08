@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f4282f7a7eac41aaa2c96e716cc8a7d5" Name="Diagram1" ZoomLevel="96">
+        <EntityTypeShape EntityType="BakeryStoreDBModel.CTHD" Width="1.5" PointX="8.25" PointY="3.5" />
+        <EntityTypeShape EntityType="BakeryStoreDBModel.CTHDNhap" Width="1.5" PointX="11" PointY="8" />
+        <EntityTypeShape EntityType="BakeryStoreDBModel.DoanhThu" Width="1.5" PointX="0.75" PointY="7.875" />
+        <EntityTypeShape EntityType="BakeryStoreDBModel.GioHang" Width="1.5" PointX="5.25" PointY="4" />
+        <EntityTypeShape EntityType="BakeryStoreDBModel.HoaDonNhap" Width="1.5" PointX="8.75" PointY="11.375" />
+        <EntityTypeShape EntityType="BakeryStoreDBModel.KhachHang" Width="1.5" PointX="3.75" PointY="8.375" />
+        <EntityTypeShape EntityType="BakeryStoreDBModel.LoaiSanPham" Width="1.5" PointX="0.75" PointY="4" />
+        <EntityTypeShape EntityType="BakeryStoreDBModel.NguyenLieu" Width="1.5" PointX="8.75" PointY="8.125" />
+        <EntityTypeShape EntityType="BakeryStoreDBModel.SanPham" Width="1.5" PointX="3" PointY="3" />
+        <AssociationConnector Association="BakeryStoreDBModel.FK__CTHD__MaSP__37A5467C" />
+        <AssociationConnector Association="BakeryStoreDBModel.FK_CTHDN_HDN" />
+        <AssociationConnector Association="BakeryStoreDBModel.FK_CTHDNhap_NguyenLieu" />
+        <AssociationConnector Association="BakeryStoreDBModel.fk_giohang_khachhang" />
+        <AssociationConnector Association="BakeryStoreDBModel.FK_GioHang_SanPham" />
+        <AssociationConnector Association="BakeryStoreDBModel.FK__SanPham__maLoai__3F466844" />
+        <EntityTypeShape EntityType="BakeryStoreDBModel.HoaDon" Width="1.5" PointX="6" PointY="8.625" />
+        <AssociationConnector Association="BakeryStoreDBModel.FK_CTHD_HoaDon" />
+        <AssociationConnector Association="BakeryStoreDBModel.FK__HoaDon__MaKH__3D5E1FD2" />
+        <EntityTypeShape EntityType="BakeryStoreDBModel.KhuyenMai" Width="1.5" PointX="0.75" PointY="0.75" />
+        <AssociationConnector Association="BakeryStoreDBModel.FK__SanPham__MaKM__3E52440B" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
